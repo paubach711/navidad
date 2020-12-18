@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=1920"> 
+<script>viewportElement.setAttribute( 'content', 'initial-scale=1.0');</script>
+<meta charset="utf-8">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+    html { font-family: 'Rochester';}
+
+    .triangulo{
+        clip-path: polygon(50% 0%,0% 100%,100% 100%);
+    }
+    .top{
+        height: 150px;
+        width: 200px;
+        background-color: green;
+        position: absolute;
+        left:200px ;
+        z-index: 10;
+    }
+    .mid{
+        height: 150px;
+        width: 300px;
+        background-color: darkgreen;
+        position: absolute;
+        top: 100px;
+        left: 150px;
+        z-index: 7;
+    }
+    .bottom{
+        height: 150px;
+        width: 400px;
+        background-color: darkolivegreen;
+        position: absolute;
+        top: 200px;
+        left: 100px;
+        z-index: 6;
+    }
+    .tronco{
+        height: 100px;
+        width: 100px;
+        background-color: brown;
+        position: absolute;
+        top: 350px;
+        left: 250px;
+    }
+    .arbol{
+        position: absolute;
+        bottom: 450px;
+        left: 250px;
+    }
+    html{
+        background-image: linear-gradient(rgb(24, 24, 61), rgb(87, 87, 134));
+        height: 100%;
+        overflow: hidden;
+    }
+    .nieve{
+        position: absolute;
+        color: white;
+        width: 20px;
+        height: 20px;
+        clip-path: circle();
+        animation-name: copo-caer, copo-lateral;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        top: -30px;
+    }
+    .nieve1{
+        left: 700px;
+        animation-delay: 4s;
+    }
+
+    .nieve2{
+        left: 500px;
+        animation-delay: 2s;
+        
+    }
+    .nieve3{
+        left: 60px;
+        animation-delay: 5s;
+    }
+    .nieve4{
+        left: 550px;
+        animation-delay: 6s;
+    }
+    .nieve5{
+        left: 430px;
+        animation-delay: 8s;
+    }
+    .nieve6{
+        left: 230px;
+        animation-delay: 3s;
+    }
+    .nieve7{
+        left: 645px;
+        animation-delay: 7s;
+    }
+    .nieve8{
+        left: 569px;
+        animation-delay: 1s;
+    }
+    .nieve9{
+        left: 520px;
+        animation-delay: 9s;
+    }
+    .nieve10{
+        left: 320px;
+        animation-delay: 10s;
+    }
+    
+    @keyframes copo-caer{
+        0%{
+            top: 0;
+        }
+        100%{
+            top: 100%;
+        }
+    }
+    @keyframes copo-lateral{
+        0%{
+            transform: translateX(0px);
+        }
+        50%{
+            transform: translateX(80px);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+</style>
+
+<div class="arbol">
+<div class="top triangulo"></div>
+<div class="mid triangulo"></div>
+<div class="bottom triangulo"></div>
+<div class="tronco"></div>
+
+<div class="luz"></div>
+<div class="luzgreen"></div>
+<div class="luzwhite"></div>
+<div class="luz2"></div>
+<div class="luzv2"></div>
+<div class="luz3"></div>
+</div>
+<style>
+    .luz{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 300px;
+        left: 170px;
+        z-index: 7;
+        animation-name: parpadeo;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        }
+        .luz2{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 150px;
+        left: 250px;
+        z-index: 7;
+        animation-name: parpadeo;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        }
+        .luz3{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 100px;
+        left: 290px;
+        z-index: 7;
+        animation-name: parpadeo;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        }
+    .luzgreen{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 280px;
+        left: 250px;
+        z-index: 7;
+        animation-name: parpadeoverde;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+        .luzv2{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 220px;
+        left: 220px;
+        z-index: 7;
+        animation-name: parpadeoverde;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+    .luzwhite{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        top: 240px;
+        left: 250px;
+        z-index: 7;
+        animation-name: parpadeoblanco;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes parpadeo{
+        0%, 100%{
+            background-color: darkred;
+            }
+        50%{
+            background-color: red;
+            box-shadow: 0px 0px 20px 10px rgba(165, 32, 59, 0.705);
+        }
+    }
+    @keyframes parpadeoverde{
+        0%, 100%{
+            background-color: rgb(12, 49, 7);
+            }
+        50%{
+            background-color: rgb(48, 202, 17);
+            box-shadow: 0px 0px 20px 10px rgba(93, 224, 75, 0.705);
+        }
+    }
+        @keyframes parpadeowhite{
+        0%, 100%{
+            background-color: rgb(54, 54, 54);
+            }
+        50%{
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 20px 10px rgba(255, 255, 255, 0.521);
+        }
+    }
+
+</style>
+
+<div class="nieve nieve1">❄</div>
+<div class="nieve nieve2">❄</div>
+<div class="nieve nieve3">❄</div>
+<div class="nieve nieve4">❄</div>
+<div class="nieve nieve5">❄</div>
+<div class="nieve nieve6">❄</div>
+<div class="nieve nieve7">❄</div>
+<div class="nieve nieve8">❄</div>
+<div class="nieve nieve9">❄</div>
+<div class="nieve nieve10">❄</div>
+
+
+<style>
+    .derecha{
+        height: 300px;
+        width: 500px;
+        background-color: rgb(110, 33, 33);
+        position: absolute;
+        clip-path: polygon(0% 100%, 50% 50%, 0% 0%);
+    }
+    .izquierda{
+        height: 300px;
+        width: 500px;
+        background-color: rgb(110, 33, 33);
+        position: absolute;
+        clip-path: polygon(100% 100%, 50% 50%, 100% 0%);
+    }
+    .abajo{
+        height: 300px;
+        width: 500px;
+        background-color: rgb(110, 33, 33);
+        position: absolute;
+        clip-path: polygon(100% 100%,50% 50%, 0% 100%);
+    }
+    .arriba{
+        height: 300px;
+        width: 500px;
+        background-color: rgb(153, 18, 18);
+        position: absolute;
+        clip-path: polygon(0% 0%, 50% 50%, 100% 0%);
+
+    }
+    .fondo{
+        height: 300px;
+        width: 500px;
+        background-color: darkred;
+        position: absolute;
+    }
+    .carta{
+        height: 280px;
+        width: 480px;
+        background-color: white;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        text-align: center;
+        text-size-adjust: 50px;
+    }
+
+    .open .arriba {
+        animation-name: abrur;
+        animation-duration: 3s;
+        transform-origin: top;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes abrur {
+        0% {
+        }
+        100%{
+            transform: rotateX(180deg);
+            z-index: -1;
+        }
+    }
+
+    .open .carta {
+        animation-name: salir;
+        animation-duration: 3s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes salir {
+        0% {
+            top: 0px;
+        }
+        40% {
+            top: -300px;
+            left: 0px;
+            transform: scale(1);
+        }
+        80% {
+            z-index: 1;
+        }
+
+        100% {
+            top: 10px;
+            left: 400px;
+            z-index: 10;
+            transform: scale(1.5);
+        }
+    }
+
+    /* @keyframes salir {
+        0%{
+            top: 0px;
+        }
+        50%{
+            top: -100px;
+            z-index: 1;
+            scale: 1.2;
+            left: 200px;
+        }
+        100%{
+            top: 0px;
+            z-index: 1;
+            scale: 1.2;
+            left: 300px;
+        }
+    } */
+
+.sobre {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+</style>
+
+
+<div class="sobre" onclick="this.classList.add('open')">
+    <div class="fondo"></div>
+    <div class="carta">
+        <h1>Que te den</h1>
+        <p>En serio te deseo lo peor,que te den me a costado 4 horas hacer este regalo de navidad</p>
+        <p>Ya me puedes puto regalar dos xbox y 1 pc gaming, me duelen los dedos de tanto escribir</p>
+        <div class="papanoel">🎅</div>
+        <div class="muneco">⛄</div>
+        <div class="regalo">🎁</div>
+
+    </div>
+    
+    <div class="abajo"></div>
+    <div class="izquierda"></div>
+    <div class="derecha"></div>
+    <div class="arriba"></div>
+</div>
+
+<style>
+.line {
+  text-align: center;
+}
+
+li {
+  position: relative;
+  margin: 0 15px;
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  width: 12px;
+  height: 28px;
+  border-radius: 50%;
+  top: 35px;
+  background: #fff;
+  z-index: -1;
+}
+li:before {
+  content: "";
+  position: absolute;
+  background: #222;
+  width: 10px;
+  height: 9px;
+  border-radius: 3px;
+  top: -4px;
+  left: 1px;
+}
+li:after {
+  content: "";
+  top: -14px;
+  left: 9px;
+  position: absolute;
+  width: 52px;
+  height: 19px;
+  border-bottom: solid #222 2px;
+  border-radius: 30%;
+}
+
+.red {
+  background-color: #fb4545;
+  animation: lightningRed 1s infinite;
+}
+
+.green {
+  background-color: #24D024;
+  animation: lightningGreen 0.8s infinite;
+}
+
+.yellow {
+  background-color: #fff952;
+  animation: lightningYellow 0.9s infinite;
+}
+
+.blue {
+  background-color: #0A53DE;
+  animation: lightningBlue 1.1s infinite;
+}
+
+.pink {
+  background-color: #f53896;
+  animation: lightningPink 1.2s infinite;
+}
+
+@keyframes lightningRed {
+  0% {
+    box-shadow: 5px 10px 35px 10px #fb4545;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 5px 10px 35px 10px #fb4545;
+  }
+}
+@keyframes lightningGreen {
+  0% {
+    box-shadow: 5px 0 35px 10px #24D024;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 5px 0 35px 10px #24D024;
+  }
+}
+@keyframes lightningYellow {
+  0% {
+    box-shadow: 5px 0 35px 10px #fff952;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 5px 0 35px 10px #fff952;
+  }
+}
+@keyframes lightningBlue {
+  0% {
+    box-shadow: 5px 0 35px 10px #0A53DE;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 5px 0 35px 10px #0A53DE;
+  }
+}
+@keyframes lightningPink {
+  0% {
+    box-shadow: 5px 0 35px 10px #f53896;
+  }
+  50% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 5px 0 35px 10px #f53896;
+  }
+}
+@media (max-width: 1024px) {
+  .line {
+    padding: 0;
+  }
+
+  li {
+    margin: 0 15px 20px 15px;
+  }
+}
+
+</style>
+<div class="light">
+    <ul class="line">
+        <li class="red"></li>
+        <li class="yellow"></li>
+        <li class="blue"></li>
+        <li class="pink"></li>
+        <li class="red"></li>
+        <li class="green"></li>
+        <li class="blue"></li>
+        <li class="yellow"></li>
+        <li class="red"></li>
+        <li class="pink"></li>
+        <li class="blue"></li>
+        <li class="yellow"></li>
+        <li class="red"></li>
+        <li class="green"></li>
+        <li class="blue"></li>
+        <li class="yellow"></li>
+        <li class="red"></li>
+        <li class="pink"></li>
+        <li class="green"></li>
+        <li class="blue"></li>
+        <li class="pink"></li>
+        <li class="red"></li>
+        <li class="green"></li>
+        <li class="blue"></li>
+    </ul>
+</div>
+
+<style>
+    .container{
+	height: 480px;
+	width: 350px;
+	-webkit-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+	position: absolute;
+	top: 75%;
+	left: 50%;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.plane{
+	position: relative;
+	-webkit-animation: float 3s infinite;
+	        animation: float 3s infinite;
+}
+@-webkit-keyframes float{
+	50%{
+		-webkit-transform: translateY(25px);
+		        transform: translateY(25px);
+	}
+}
+@keyframes float{
+	50%{
+		-webkit-transform: translateY(25px);
+		        transform: translateY(25px);
+	}
+}
+.hand{
+	-webkit-transform: rotate(10deg);
+	    -ms-transform: rotate(10deg);
+	        transform: rotate(10deg);
+	-webkit-animation: wave 1.5s infinite;
+	        animation: wave 1.5s infinite;
+	-webkit-transform-origin: center;
+	    -ms-transform-origin: center;
+	        transform-origin: center;	
+}
+.blade{
+	-webkit-animation:spin 1s infinite linear;
+	        animation:spin 1s infinite linear;
+	-webkit-transform-origin: 50% 54%;
+	    -ms-transform-origin: 50% 54%;
+	        transform-origin: 50% 54%;
+}
+@-webkit-keyframes spin{
+	100%{
+		-webkit-transform: rotateX(360deg);
+		        transform: rotateX(360deg);
+	}
+}
+@keyframes spin{
+	100%{
+		-webkit-transform: rotateX(360deg);
+		        transform: rotateX(360deg);
+	}
+}
+@-webkit-keyframes wave{
+	50%{
+		-webkit-transform: rotate(-10deg);
+		        transform: rotate(-10deg);
+	}
+}
+@keyframes wave{
+	50%{
+		-webkit-transform: rotate(-10deg);
+		        transform: rotate(-10deg);
+	}
+}
+a{
+    color: #F40009;
+    font-family: "Poppins",sans-serif;
+    position:absolute;
+    right:20px ;
+    top:20px;
+    border:2px solid #F40009;
+    text-decoration:none;
+}
+@media screen and (min-width: 451px) {
+  a{
+    font-size: 20px;
+     padding:8px 12px 8px 12px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  a{
+    font-size: 14px;
+     padding:5px 8px 5px 8px;
+  }
+}
+</style>
+
+<div class="container">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="350" height="400">
+      <path fill="transparent" d="M0 0h350v400H0z"/>
+      <g fill="#CCE6F4" class="cloud">
+        <path d="M63 53h65a13 13 0 0113 13 13 13 0 01-13 13H61a12 12 0 01-12-12 14 14 0 0114-14z"/>
+        <path d="M83 26a19 19 0 0119 19v1a19 19 0 01-19 19h-2a18 18 0 01-18-18v-1a20 20 0 0120-20z"/>
+        <path d="M113 38a14 14 0 0114 14v1a14 14 0 01-14 14h-2a13 13 0 01-13-13v-1a15 15 0 0115-15z"/>
+      </g>
+      <g fill="#CCE6F4" class="cloud">
+        <path d="M202.936 343.907h52.943a10.589 10.589 0 0110.588 10.589 10.589 10.589 0 01-10.588 10.588h-54.572a9.774 9.774 0 01-9.774-9.774 11.403 11.403 0 0111.403-11.403z"/>
+        <path d="M219.226 321.916a15.476 15.476 0 0115.476 15.475v.815a15.476 15.476 0 01-15.476 15.475h-1.629a14.661 14.661 0 01-14.661-14.66v-.815a16.29 16.29 0 0116.29-16.29z"/>
+        <path d="M243.661 331.69a11.403 11.403 0 0111.403 11.403v.814a11.403 11.403 0 01-11.403 11.403h-1.629a10.589 10.589 0 01-10.588-10.588v-.815a12.218 12.218 0 0112.217-12.217z"/>
+      </g>
+      <g fill="#CCE6F4" class="cloud">
+        <path d="M12.936 245.907h52.943a10.589 10.589 0 0110.588 10.589 10.589 10.589 0 01-10.588 10.588H11.307a9.774 9.774 0 01-9.774-9.774 11.403 11.403 0 0111.403-11.403z"/>
+        <path d="M29.226 223.916a15.476 15.476 0 0115.476 15.475v.815a15.476 15.476 0 01-15.476 15.475h-1.629a14.661 14.661 0 01-14.661-14.66v-.815a16.29 16.29 0 0116.29-16.29z"/>
+        <path d="M53.661 233.69a11.403 11.403 0 0111.403 11.403v.814a11.403 11.403 0 01-11.403 11.403h-1.629a10.589 10.589 0 01-10.588-10.588v-.815A12.218 12.218 0 0153.66 233.69z"/>
+      </g>
+      <g fill="#CCE6F4" class="cloud">
+        <path d="M246.79835,143.07881h75.40328a15.04912,15.04912,0,0,1,15.04912,15.04912v0a15.0491,15.0491,0,0,1-15.0491,15.0491H244.79837a14.04912,14.04912,0,0,1-14.04912-14.04912v0A16.0491,16.0491,0,0,1,246.79835,143.07881Z"/>
+        <path d="M269.00509,111.82294h2.04917a21.04912,21.04912,0,0,1,21.04912,21.04912v3.04917a21.04909,21.04909,0,0,1-21.04909,21.04909h-4.04917A20.04912,20.04912,0,0,1,246.956,136.9212V133.872a22.04909,22.04909,0,0,1,22.04909-22.04909Z" />
+        <path d="M304.522,125.71444h.47291A16.04912,16.04912,0,0,1,321.044,141.76356v1.47291a16.0491,16.0491,0,0,1-16.0491,16.0491H302.522a15.04912,15.04912,0,0,1-15.04912-15.04912v-1.47291A17.0491,17.0491,0,0,1,304.522,125.71444Z"/>
+      </g>
+      <g class="plane">
+        <rect x="215.747" y="157.738" width="25.511" height="43.645" rx="12.755" ry="12.755" fill="#711723"/>
+        <path fill="#f40009" d="M166.263 185.401h74.995v31.965h-74.995zM166.263 217.366h74.995a31.965 31.965 0 01-31.965 31.965h-43.03v-31.965z"/>
+        <g class="hand">
+          <rect x="136.437" y="152.836" width="26.365" height="9.113" rx="4.557" ry="4.557" transform="rotate(-120 149.62 157.393)" fill="#f6bfb1"/>
+          <path fill="#f40009" d="M144.906 163.746l11.978-6.916 20.407 35.346-11.978 6.916z"/>
+          <rect x="139.226" y="154.214" width="20.172" height="6.973" rx="3.486" ry="3.486" transform="rotate(-30 149.312 157.7)" fill="#e6e6e6"/>
+        </g>
+        <path fill="#f6bfb1" d="M171.488 155.28h37.805v23.974h-37.805z"/>
+        <path d="M165.956 185.093v64.545h-12.602v-.024c-.406.015-.818.024-1.23.024a32.272 32.272 0 110-64.545c.412 0 .824.01 1.23.025v-.025z" fill="#711723"/>
+        <path fill="#300403" d="M161.345 185.093h4.918v64.545h-4.918z"/>
+        <path d="M113.376 210.296v11.987h-2.34v-.004a6.053 6.053 0 01-.23.004 5.993 5.993 0 110-11.987c.077 0 .154.002.23.005v-.005z" fill="#f40009"/>
+        <g fill="#300403">
+          <circle cx="155.505" cy="244.106" r="2.459"/>
+          <circle cx="155.505" cy="190.933" r="2.459"/>
+          <circle cx="155.505" cy="208.452" r="2.459"/>
+          <circle cx="155.505" cy="226.586" r="2.459"/>
+        </g>
+        <rect class="blade" x="113.244" y="167.266" width="6.762" height="98.354" rx="3.381" ry="3.381" fill="#300403"/>
+        <path d="M195.154 211.526h34.732a4.918 4.918 0 014.917 4.918 4.918 4.918 0 01-4.917 4.917h-34.732a4.918 4.918 0 01-4.917-4.917 4.918 4.918 0 014.917-4.918z" fill="#711723"/>
+        <g fill="#fff">
+          <rect x="174.148" y="171.282" width="15.925" height="40.192" rx="7.963" ry="7.963"/>
+          <rect x="188.824" y="171.282" width="15.925" height="40.192" rx="7.963" ry="7.963"/>
+          <rect x="180.862" y="167.691" width="15.925" height="51.21" rx="7.963" ry="7.963" transform="rotate(-90 188.824 193.296)"/>
+          <path d="M161.55 180.896a7.963 7.963 0 016.42-9.252l20.066-3.625a7.963 7.963 0 019.251 6.42 7.963 7.963 0 01-6.42 9.251l-20.066 3.626a7.963 7.963 0 01-9.251-6.42z"/>
+          <path d="M183.122 174.543a7.963 7.963 0 019.251-6.42l19.491 3.521a7.963 7.963 0 016.42 9.252 7.963 7.963 0 01-9.251 6.42l-19.491-3.522a7.963 7.963 0 01-6.42-9.25z"/>
+        </g>
+        <rect x="167.185" y="151.899" width="6.455" height="27.355" rx="3.227" ry="3.227" fill="#711723"/>
+        <rect x="207.449" y="151.899" width="6.455" height="27.355" rx="3.227" ry="3.227" fill="#711723"/>
+        <circle cx="190.083" cy="165.883" r="3.842" fill="#e76160"/>
+        <circle cx="190.083" cy="179.868" r="6.454"/>
+        <path fill="#f40009" d="M167.185 148.21h46.718v7.069h-46.718zM213.903 145.137h-46.718a10.757 10.757 0 0110.757-10.758h25.204a10.757 10.757 0 0110.757 10.758z"/>
+        <path fill="#711723" d="M167.185 143.907h46.718v4.303h-46.718z"/>
+        <circle cx="181.016" cy="146.059" r="7.377" fill="#711723"/>
+        <circle cx="181.016" cy="146.059" r="5.62" fill="#300403"/>
+        <circle cx="200.072" cy="146.059" r="7.377" fill="#711723"/>
+        <circle cx="200.072" cy="146.059" r="5.62" fill="#300403"/>
+        <path d="M176.713 165.422s2.459-3.995 6.454 0M197.306 165.422s2.459-3.995 6.454 0" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.844"/>
+      </g>
+    </svg>		
+  </div>
+
+  
